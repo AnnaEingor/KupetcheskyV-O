@@ -1,0 +1,17 @@
+.bg{ 
+      background-color: #f9d0a4;
+      color: #3d240b;
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      font-size: 1.5em;
+  }
+.bg-1{
+  font-size: 2em;
+ }
+.bg-2{
+    margin-top: 12px;
+}
+  li a{
+    margin-right: 60px;
+    
+  }
