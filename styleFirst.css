@@ -1,17 +1,38 @@
 .bg{ 
       background-color: #f9d0a4;
       color: #3d240b;
-      font-family: 'Dancing Script', cursive;
+      font-family: 'Souvenir', arial;
       font-weight: bold;
-      font-size: 1.5em;
+      font-size: 1.2em;
   }
 .bg-1{
   font-size: 2em;
  }
 .bg-2{
     margin-top: 12px;
-}
+  }
   li a{
-    margin-right: 60px;
+    margin-right: 50px;
+  }
+  .dropdown-menu li a{
+    font-weight: bold;
     
   }
+  .carousel-caption p{
+    font-size: 0.8em;
+  }
+  
+  .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
