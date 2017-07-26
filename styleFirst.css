@@ -1,11 +1,13 @@
-.bg{ 
+.wrap{ 
       background-color: #f9d0a4;
       color: #3d240b;
       font-family: 'Souvenir', arial;
       font-weight: bold;
       font-size: 1.2em;
-  }
-.bg-1{
+
+ }
+
+ .bg-1{
   font-size: 2em;
  }
 .bg-2{
@@ -35,4 +37,20 @@
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+}
+ #foot{
+   background-color: #f9d0a4;
+      
+      font-family: 'Souvenir', arial;
+      font-weight: bold;
+      font-size: 1.2em;
+      height: 70px;
+ }
+
+#foot ul li{
+   display: inline-block;
+ } 
+#foot ul li a{
+color: #3d240b;
+margin: 60px;
 }
