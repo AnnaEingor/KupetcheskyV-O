@@ -45,6 +45,9 @@
       font-size: 1.2em;
       height: 70px;
  }
+ #foot ul{
+   text-align: center;
+ }
 
 #foot ul li{
    display: inline-block;
@@ -54,3 +57,4 @@
 color: #3d240b;
 margin: 60px;
 }
+
