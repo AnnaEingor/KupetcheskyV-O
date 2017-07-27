@@ -1,0 +1,27 @@
+[
+{ "firstName": "Anna",
+  "lastName": "Eingor",
+  "email": "an.lerm@yandex.ru",
+  "password": "1234",
+  "addressHome": "ytytyt",
+  "addressWork": "yieieieieieie",
+  "discount": 5
+  
+/*},
+{
+"firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "addressHome": "",
+  "addressWork": ""
+},
+{
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "addressHome": "",
+  "addressWork": "" */
+}
+]
