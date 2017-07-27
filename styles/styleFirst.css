@@ -39,8 +39,7 @@
     }
 }
  #foot{
-   background-color: #f9d0a4;
-      
+      background-color: #f9d0a4;
       font-family: 'Souvenir', arial;
       font-weight: bold;
       font-size: 1.2em;
@@ -49,6 +48,7 @@
 
 #foot ul li{
    display: inline-block;
+   padding-top: 20px;
  } 
 #foot ul li a{
 color: #3d240b;
