@@ -11,42 +11,46 @@ orderApp.factory("MenuTA", function(){
 });
 
 orderApp.factory("menus", function(MenuTA) {
-    var menuArr = [];
+    var orderArr = [];
 
-    var add = function(posMenu) {
-        menuArr.push(posMenu);
+    var addToList = function(posMenu) {
+        orderArr.push(posMenu);
     }
 
-    var remove = function(index) {
-        menuArr.splice(index, 1);
+    var removeFromList = function(index) {
+        orderArr.splice(index, 1);
+    }
+
+    var changeOrder = function(posMenu, index){
+        orderArr[index] = posMenu;   
     }
 
 // admin
     var load = function(plainObjectArr) {
         for (var i = 0; i < plainObjectArr.length; i++) {
-            menuArr.push(new MenuTA(plainObjectArr[i]))
+            orderArr.push(new MenuTA(plainObjectArr[i]))
         }
     }
 
-    var getAll = function() {
-        return menuArr;
+    var getAllList = function() {
+        return orderArr;
     }
 
-    var get = function(index) {
-        return menuArr[index];
+    var getPosMenu = function(index) {
+        return orderArr[index];
     }
 
     var removeAll = function() {
-        menuArr = [];
+        orderArr = [];
     }
 
     return {
-        add: add,
-        update: update,
-        remove: remove,
+        addToList: addToList,
+        removeFromList: removeFromList,
+        changeOrder: changeOrder,
         load: load,
-        getAll: getAll,
-        get: get,
+        getAllList: getAllList,
+        getPosMenu: getPosMenu,
         removeAll: removeAll
     }
 })

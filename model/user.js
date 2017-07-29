@@ -14,7 +14,7 @@ orderApp.factory("User", function(){
     return User;
 });
 
-// Service that manges the active user
+// Service that manages the active user
 
 orderApp.factory("activeUser", function(User){
     var user = null;
@@ -36,7 +36,7 @@ orderApp.factory("activeUser", function(User){
     };
 
     var getDiscount = function(){
-        
+      //todo  
     }
 
     return {

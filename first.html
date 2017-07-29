@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/styleFirst.css">
     <script src="model/menu.js"></script>
     <script src="model/user.js"></script>
+    <script src="siteMenu/main.js"></script>
 
 </head>
 <body>
@@ -98,8 +99,8 @@
       </li>
     </ul>
     
-    <!-- Button ORDER ONLINE -->
-        
+    <!-- Button ORDER ONLINE  and ANGULAR-->
+        <div ng-app="orderApp" ng-controller = "orderCtrl">
           <button class="btn btn-danger navbar-btn" type="button" data-toggle="dropdown">Order online<span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right" id="divid">
               <li><a href="#!table">Reserve a table</a></li>
@@ -109,8 +110,8 @@
               <li><a href="#!cakes">Order a cake</a></li>
               <li class="divider"></li>
               <li><a href="#!takeaway">Order for take away</a></li>
-           </ul>
-        
+            </ul>
+        </div>
         
       </div>
    </nav>
