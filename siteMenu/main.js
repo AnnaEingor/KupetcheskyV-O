@@ -4,54 +4,38 @@ var order = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap"])
   
   order.config(function($routeProvider){
     $routeProvider
-    .when("/order", {
-            templateUrl: "app/recipe/recipeGallery.html",
-            controller: "RecipeGalleryCtrl"
+    .when("/orderCake", {
+            templateUrl: "order/orderCake.html",
+            controller: "orderCakeCtrl"
+        })
+    .when("/orderMasterClass", {
+            templateUrl: "order/orderMClass.html",
+            controller: "orderMClassCtrl"
+        })    
+    .when("/orderTable", {
+            templateUrl: "order/table.html",
+            controller: "tableCtrl"
+        })  
+    .when("/orderFood", {
+            templateUrl: "order/orderFood/menuGallery.html",
+            controller: "menuGalleryCtrl"
+        })  
+        .when("/orderFood/:menuIndex", {
+            templateUrl: "order/orderFood/menuSet.html",
+            controller: "menuSetCtrl"
+        })
+        .when("/orderFood/myCard", {
+            templateUrl: "order/orderFood/menuMyCard.html",
+            controller: "menuMyCardCtrl"            
+        })
+        .when("/orderFood/delivery",{
+            templateUrl: "order/orderFood/delivery/deliveryConfirm.html",
+            controller: "deliveryConfirmCtrl"
+        })
+        .when("/orderFood/pickUp",{
+            templateUrl: "order/orderFood/pickUp/pickUpConfirm.html",
+            controller: "pickUpConfirmCtrl"
         })
 });
 
 
-/*
-
-gallery.config(function($routeProvider){
-  $routeProvider
-  .when("/user",{
-  templateUrl: "",
-  controller: ""
-    
-  })
-  
-  .when("/orderOnline",{
-    templateUrl: "",
-    controller: ""
-  })
-  
-  .when("/", {
-   templateUrl: "",
-    controller: ""
-});
-});
-
-var recipeApp = angular.module("RecipeApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
-
-recipeApp.config(function ($routeProvider) {
-    $routeProvider
-        .when("/", {
-            templateUrl: "app/home/home.html",
-            controller: "HomeCtrl"
-        })
-        .when("/recipes", {
-            templateUrl: "app/recipe/recipeGallery.html",
-            controller: "RecipeGalleryCtrl"
-        })
-        .when("/recipes/:recipeIndex", {
-            templateUrl: "app/recipe/recipeDetails.html",
-            controller: "RecipeDetailsCtrl"
-        }).when("/new", {
-            templateUrl: "app/recipe/newRecipe.html",
-            controller: "NewRecipeCtrl"            
-        })
-
-});
-
-*/

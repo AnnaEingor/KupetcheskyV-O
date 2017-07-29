@@ -35,15 +35,21 @@ orderApp.factory("activeUser", function(User){
         return user;
     };
 
-    var getDiscount = function(){
-      //todo  
+    var getDiscount = function(loggedInUser){
+        if(user.discount !=0){
+        user = loggedInUser;  
+
+        //todo
+        
+        }
     }
 
     return {
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        get: get
+        get: get,
+        getDiscount: getDiscount
     };   
 });
 
