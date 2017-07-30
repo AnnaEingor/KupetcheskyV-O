@@ -1,39 +1,39 @@
 
-var order = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]); 
+var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]); 
 //order.controller("orderCtrl", function($scope) {
   
-  order.config(function($routeProvider){
+  orderApp.config(function($routeProvider){
     $routeProvider
     .when("/orderCake", {
-            templateUrl: "order/orderCake.html",
+            templateUrl: "orders/orderCake.html",
             controller: "orderCakeCtrl"
         })
     .when("/orderMasterClass", {
-            templateUrl: "order/orderMClass.html",
+            templateUrl: "orders/orderMClass.html",
             controller: "orderMClassCtrl"
         })    
     .when("/orderTable", {
-            templateUrl: "order/table.html",
+            templateUrl: "orders/table.html",
             controller: "tableCtrl"
         })  
     .when("/orderFood", {
-            templateUrl: "order/orderFood/menuGallery.html",
+            templateUrl: "orders/orderFood/menuGallery.html",
             controller: "menuGalleryCtrl"
         })  
         .when("/orderFood/:menuIndex", {
-            templateUrl: "order/orderFood/menuSet.html",
+            templateUrl: "orders/orderFood/menuSet.html",
             controller: "menuSetCtrl"
         })
         .when("/orderFood/myCard", {
-            templateUrl: "order/orderFood/menuMyCard.html",
+            templateUrl: "orders/orderFood/menuMyCard.html",
             controller: "menuMyCardCtrl"            
         })
         .when("/orderFood/delivery",{
-            templateUrl: "order/orderFood/delivery/deliveryConfirm.html",
+            templateUrl: "orders/orderFood/delivery/deliveryConfirm.html",
             controller: "deliveryConfirmCtrl"
         })
         .when("/orderFood/pickUp",{
-            templateUrl: "order/orderFood/pickUp/pickUpConfirm.html",
+            templateUrl: "orders/orderFood/pickUp/pickUpConfirm.html",
             controller: "pickUpConfirmCtrl"
         })
 });

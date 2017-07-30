@@ -1,4 +1,4 @@
-// Shared User Constructor
+
 orderApp.factory("User", function(){
     function User(plainObject) {
         this.firstName = plainObject.firstName;

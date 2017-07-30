@@ -1,15 +1,18 @@
-order.controller("orderCtrl", function($scope, $http, $location, menus){
+orderApp.controller("menuGalleryCtrl", function($scope, $http, $location, menus){
   
-    
-        $scope.orderArr = [];
-        $http.get("data/menuTA.json").then(function(response){
-           for (var i=0; i < response.data.length; i++){
-         $scope.orderArr.push(new MenuTA(response.data[i]));
-        }
-        });
-    
+    if(menus.getAllList().length===0){
+            $scope.orderArr = [];
+            $http.get("data/menuTA.json").then(function(response){
+            menus.load(response.data);
+            $scope.orderArr = menus.getAllList;
+            })
+         }
+         else{
+            $scope.orderArr = menus.getAllList;
+         }
+        
       
-    $scope.openDetails = function(index) {
+        $scope.openDetails = function(index) {
         $location.path("/menus/" + index)
     }
 });

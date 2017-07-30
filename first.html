@@ -20,9 +20,9 @@
 
     <!--App Stuff-->
     <link rel="stylesheet" href="styles/styleFirst.css">
+    <script src="siteMenu/main.js"></script>
     <script src="model/menu.js"></script>
     <script src="model/user.js"></script>
-    <script src="siteMenu/main.js"></script>
     <script src ="orders/orderFood/menuGalleryCtrl.js"></script>
 
 </head>
@@ -101,7 +101,7 @@
     </ul>
     
     <!-- Button ORDER ONLINE  and ANGULAR-->
-        <div ng-app="orderApp" ng-controller = "orderCtrl">
+        <div ng-app="orderApp" >
           <button class="btn btn-danger navbar-btn" type="button" data-toggle="dropdown">Order online<span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right" id="divid">
               <li><a href="#!orderTable">Reserve a table</a></li>
@@ -112,8 +112,10 @@
               <li class="divider"></li>
               <li><a href="#!orderFood">Order for take away</a></li>
             </ul>
-        </div>
+            <div ng-view></div>
+          </div>
         
+     
       </div>
    </nav>
 
