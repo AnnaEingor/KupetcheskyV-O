@@ -5,6 +5,6 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $location, menus)
     });
 
         $scope.openDetails = function(index) {
-        $location.path("/menus/" + index)
+        $location.path("/orderFood/" + index)
     }
 });
