@@ -1,0 +1,22 @@
+.gal-1{
+    background-color: #f9d0a4;
+      
+}
+#galHeader{
+        color: #3d240b;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.2em;
+    }
+#gallImg{
+      height: 365px; 
+}
+
+#startOrder{
+    font-size: 3em;
+    color: #3d240b;
+    font-weight: bold;
+    text-align: center;
+}
+
+    
