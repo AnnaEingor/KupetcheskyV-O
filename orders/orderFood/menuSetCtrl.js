@@ -1,6 +1,8 @@
 orderApp.controller("menuSetCtrl", function($scope, $location, menus, MenuTA, $routeParams){
- $scope.order = new MenuTA(menus.getPosMenu($routeParams.orderIndex));
+ 
+    $scope.order = new MenuTA(menus.getPosMenu($routeParams.orderIndex));
 
+ console.log($routeParams.orderIndex);
 //    $scope.orderArr = menus.getAllList();
    
 //    $scope.order = menus.getPosMenu($routeParams.orderIndex);

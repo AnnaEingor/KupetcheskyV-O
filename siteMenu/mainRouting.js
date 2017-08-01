@@ -2,8 +2,8 @@
 var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]); 
   
   orderApp.config(function($routeProvider){
-    $routeProvider
-.when("/", {
+     $routeProvider
+  .when("/", {
     templateUrl: "first.html",
     })
     .when("/orderCake", {
