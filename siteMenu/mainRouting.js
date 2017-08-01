@@ -7,15 +7,15 @@ var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap
     templateUrl: "first.html",
     })
     .when("/orderCake", {
-            templateUrl: "orders/orderCake.html",
+            templateUrl: "orders/orderCake/orderCake.html",
             controller: "orderCakeCtrl"
         })
     .when("/orderMasterClass", {
-            templateUrl: "orders/orderMClass.html",
+            templateUrl: "orders/orderMasterClass/orderMClass.html",
             controller: "orderMClassCtrl"
         })    
     .when("/orderTable", {
-            templateUrl: "orders/table.html",
+            templateUrl: "orders/orderTable/table.html",
             controller: "tableCtrl"
         })  
     .when("/orderFood", {
