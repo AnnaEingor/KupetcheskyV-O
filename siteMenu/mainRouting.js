@@ -30,8 +30,8 @@ var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap
             templateUrl: "orders/orderFood/menuMyCard.html",
             controller: "menuMyCardCtrl"            
         })
-        .when("/orderFood/delivery",{
-            templateUrl: "orders/orderFood/delivery/deliveryConfirm.html",
+        .when("/orderFood/Delivery",{
+            templateUrl: "orders/orderFood/Delivery/deliveryConfirm.html",
             controller: "deliveryConfirmCtrl"
         })
         .when("/orderFood/pickUp",{

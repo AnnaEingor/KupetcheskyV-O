@@ -31,7 +31,7 @@ orderApp.factory("activeUser", function(User){
         user = null;
     };
 
-    var get = function() {
+    var getUser = function() {
         return user;
     };
 
@@ -48,7 +48,7 @@ orderApp.factory("activeUser", function(User){
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        get: get,
+        getUser: getUser,
         getDiscount: getDiscount
     };   
 });
