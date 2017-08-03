@@ -1,0 +1,24 @@
+<!--this is template, that is placed on the same screen as the gallery menu  -->
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 my-list">
+      <h1>My wish-list</h1>
+      <table>
+          <thead>
+              <th>Position</th>
+              <th>Quantity</th>
+              <th>Sum</th>
+              <th>Change</th>
+              <th>Delete</th>
+          </thead>
+            <tbody>
+        <tr ng-repeat="order in orderArr">
+        <td>{{ order.name }}</td> <!--added after addToOrder() from menuSet  -->
+        <td>{{ quantity }}</td> <!--from ng-model in menuSet -->
+        <td>{{order.price}}</td>
+        <td><span class="glyphicon glyphicon-pencil"></span></td>
+        <td><span class="glyphicon glyphicon-remove"></span></td>
+        </tr>
+        </tbody>
+ 
+</table>
+    </div>

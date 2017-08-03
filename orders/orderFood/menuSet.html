@@ -1,20 +1,33 @@
 
-<h1>Testing {{5+5}}</h1>
+<nav class="navbar gal-1">
+   <div class="container-fluid">
+   <h1 class="galHeader">Do we add this position to your order?</h1> 
+   </div>
+</nav>
 
 <div class="container">
 
 <h1>{{order.name}}</h1>
  <div class = "row">  
-   <!--<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-       
-    <ul>
-        <li ng-repeat="order in orderArr">{{order.name}}</li>
-        </ul>
-  </div>-->
    
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
     <p>{{order.set}}</p>
+    
+    <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> <br> {{order.price}} rub
+     
+    <br><br>
+
+<!--todo action =" file "  in form-->
+     
+<form class="form-inline">
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" class="form-control" placeholder="0"  name="quantity" name="quantity" ng-model="quantityOfPosition">
+    </div>
+      <button type="button" class="btn gal-1" ng-click="addToOrder()">Add to my order</button>
+    </form>
     </div>
 
+    
 </div>
 </div> 
