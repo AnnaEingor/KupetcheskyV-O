@@ -8,5 +8,9 @@ orderApp.controller("menuSetCtrl", function($scope, $routeParams, menus, MenuTA)
 
    $scope.order = menus.getPosMenu($routeParams.orderIndex);
    $scope.quantityOfPosition = "0";
+
+   $scope.addToOrder  = function(){
+       
+   }
     
 });

@@ -1,4 +1,4 @@
-
+<!--to do modal   -->
 <nav class="navbar gal-1">
    <div class="container-fluid">
    <h1 class="galHeader">Do we add this position to your order?</h1> 
@@ -7,27 +7,27 @@
 
 <div class="container">
 
-<h1>{{order.name}}</h1>
- <div class = "row">  
-   
+  <div class = "row">  
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-    <p>{{order.set}}</p>
+      <h4>{{order.name}}</h4>
+      <p>{{order.set}}</p>
     
-    <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> <br> {{order.price}} rub
+      <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> <br> {{order.price}} rub
      
-    <br><br>
+    <  br><br>
 
 <!--todo action =" file "  in form-->
      
-<form class="form-inline">
-    <div class="form-group">
-      <label for="quantity">Quantity</label>
-      <input type="number" class="form-control" placeholder="0"  name="quantity" name="quantity" ng-model="quantityOfPosition">
-    </div>
+     <form class="form-inline">
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" placeholder="0"  name="quantity" name="quantity" ng-model="quantityOfPosition">
+       </div>
       <button type="button" class="btn gal-1" ng-click="addToOrder()">Add to my order</button>
-    </form>
+     </form>
     </div>
-
+    
+   
     
 </div>
 </div> 
