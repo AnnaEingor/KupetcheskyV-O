@@ -1,5 +1,37 @@
 <!--to do modal   -->
-<nav class="navbar gal-1">
+
+<div id = "modalSet" class = "modal hide fade">
+  <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title galHeader">Do we add this position to your order?</h4>
+        </div>
+        <div class="modal-body">
+          <h4>{{order.name}}</h4>
+          <p>{{order.set}}</p>
+          <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> <br> {{order.price}} rub
+
+          <form class="form-inline">
+           <div class="form-group">
+           <label for="quantity">Quantity</label>
+           <input type="number" class="form-control" placeholder="0"  name="quantity" name="quantity" ng-model="quantityOfPosition">
+           </div>
+           
+           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn gal-1" ng-click="addToOrder()">Add to my order</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<!-- <nav class="navbar gal-1">
    <div class="container-fluid">
    <h1 class="galHeader">Do we add this position to your order?</h1> 
    </div>
@@ -18,7 +50,7 @@
 
 <!--todo action =" file "  in form-->
      
-     <form class="form-inline">
+     <!-- <form class="form-inline">
       <div class="form-group">
         <label for="quantity">Quantity</label>
         <input type="number" class="form-control" placeholder="0"  name="quantity" name="quantity" ng-model="quantityOfPosition">
@@ -30,4 +62,4 @@
    
     
 </div>
-</div> 
+</div>  --> -->

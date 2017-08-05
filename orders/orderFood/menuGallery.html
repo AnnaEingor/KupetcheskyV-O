@@ -95,7 +95,7 @@
 
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="order in orderArr">
         
-        <div class="well gal-1 order-item" ng-click="openDetails($index)">
+        <div class="well gal-1 order-item" ng-click="openDetails($index)" data-toggle="modalSet">
             <h3>{{order.name}}</h3>
             <img ng-src="{{order.photo}}" class="img-responsive" alt="Image">
             <p>{{order.set}}</p>
@@ -107,7 +107,7 @@
     </div>
 
     <div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4 table-responsive my-list">
-     <h4 class="text-center"><strong>My wish-list</strong></h4>
+     <h4 class="wish">My wish-list</h4>
       <table class="table table-hover table-striped">
           <thead>
               <th>Position</th>
