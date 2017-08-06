@@ -22,16 +22,19 @@
 #reserve{
     font-size: 1.2em;
 }
-#dateAndTime{
+.dateAndTime{
     font-size: 1.2em;
 }
 .submitten{
     background-color: #3d240b;
     color: #f9d0a4;
 }
-#map{
-    height: 100%;
+#map_canvas{
+     
     background-color: #f9d0a4;
+    border: 2px solid #3d240b;
+    border-radius: 10px;
+
 }
 .my-list{
     border: 2px solid #3d240b;

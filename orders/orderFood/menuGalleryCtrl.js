@@ -7,6 +7,7 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
     });
 
       $scope.quantityOfPosition = 0;
+
    //to do
         
      $scope.cartArr =[];
@@ -36,18 +37,4 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
 
 
 
-   //     $scope.openDetails = function(index) {
-    //     $location.path("/orderFood/" + index)
-    // }
-
-
-
-//    if(menus.getAllList().length===0){
-//     $scope.orderArr = menus.getAllList();
-// }
-
-//   
-//    
-
-//    
-    
+ 

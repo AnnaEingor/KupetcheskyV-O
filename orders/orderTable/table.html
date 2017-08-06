@@ -57,7 +57,7 @@
 
       <div class="row">
       <div class="col-md-6">
-        <p id="dateAndTime">Choose date and time</p>
+        <p class="dateAndTime">Choose date and time</p>
         <p class="input-group">
           <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
                 ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" 
@@ -81,7 +81,7 @@
      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="4"></textarea><br>
      <div class="row">
         <div class="col-sm-12 form-group">
-        <pre class="alert">Your name is {{clientName}}, number of guests: {{quantity}}.   Date: {{dt}}. Time: {{mytime | date:'shortTime' }}</pre>
+        <pre class="alert">Your name is {{clientName}}, number of guests: {{quantity}}.   Date: {{dt | date:"fullDate"}}. Time: {{mytime | date:'shortTime' }}</pre>
           <button class="btn pull-right submitten" type="submit">Send</button> 
           <button type="button" class="btn btn-default pull-right" ng-click="clear()">Clear</button>
         </div>

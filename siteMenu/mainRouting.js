@@ -36,7 +36,7 @@ var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap
         })
         .when("/orderFood/pickUp",{
             templateUrl: "orders/orderFood/pickUp/pickUpConfirm.html",
-            controller: "pickUpConfirmCtrl"
+            controller: "pickUpCtrl"
         })
 });
 
