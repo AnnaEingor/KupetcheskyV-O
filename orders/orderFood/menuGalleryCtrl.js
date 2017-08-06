@@ -10,31 +10,37 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
 
    //to do
         
-     $scope.cartArr =[];
-     $scope.addToCart  = function(){
-        if($scope.quantityOfPosition >= 1){
+     
+    $scope.addToCart  = function(){
+      $scope.cartArr =[];
+      if($scope.quantityOfPosition >= 1){
             $scope.cartArr = menus.addToList($routeParams.orderIndex);
-        }
-        
-         console.log(cartArr);
        }
+        
+          console.log(cartArr);
+      }
+
+    $scope.changeQty = function(){
+      menus.changeOrder(posMenu, $routeParams.orderIndex);
+      }
+    $scope.remove =function(){
+      menus.removeFromList($routeParams.orderIndex);
+    }
 
    });
 
-    orderApp.filter('myFilter', function() {
-      return function(items, quantityOfPosition) {
+    orderApp.filter('myFilter', function(){
+      return function(items, qty) {
          var filtered = [];
        for (var i = 0; i < items.length; i++) {
           var item = items[i];
-         if(quantityOfPosition>=1){
+         if(qty>=1){
            filtered.push(item);
+           console.log(filtered.push(item));
          }
          }
       return filtered;
      };
  });
+    
 
-
-
-
- 
