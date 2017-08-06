@@ -30,7 +30,7 @@
                  <input class="form-control" type="number" placeholder="0" name="quantity" id="sm" min="0" ng-model="quantityOfPosition"><br>
                  </div>
                </div>
-                 <button type="button" class="btn submitten" ng-click="addToCart($index,quantityOfPosition)">Add to my wish-list</button>
+                 <button type="button" class="btn submitten" ng-click="addToCart($index)">Add to my wish-list<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
             </form>
         
        
@@ -40,6 +40,7 @@
     </div>
 
     <!--My wish-list -->
+    <div data-spy="affix" data-offset-top="30">
     <div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4 table-responsive my-list">
      <h4 class="wish">My wish-list</h4>
       <table class="table table-hover table-striped">
@@ -50,20 +51,31 @@
               <th>Change</th>
               <th>Delete</th>
           </thead>
+            <tfoot>
+             <tr>
+              <th></th>
+              <th></th>
+              <th><strong>Total:{{total()}}</strong> </th>
+             </tr>
+            </tfoot>
             <tbody>
+
         <tr ng-repeat="order in orderArr | myFilter">
         <td>{{order.name}}</td>
         <td>{{quantityOfPosition}}</td> 
-        <td>{{order.price}}</td>
+        <td>{{order.price*quantityOfPosition}}</td>
         <td><span class="glyphicon glyphicon-pencil" ng-click = "changeQty()"></span></td>
         <td><span class="glyphicon glyphicon-remove" ng-click ="remove()"></span></td>
         </tr>
         </tbody>
+      <hr>
+
  
 </table>
-  </div>
-
-
+   </div>
+    </div>
+    
+    
 
 </div>
 </div>

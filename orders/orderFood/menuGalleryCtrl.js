@@ -6,35 +6,17 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
        menus.load(response.data);
     });
 
-      $scope.quantityOfPosition = 0;
-
-   //to do
-        
-     
-    $scope.addToCart  = function(){
-      $scope.cartArr =[];
-      if($scope.quantityOfPosition >= 1){
-            $scope.cartArr = menus.addToList($routeParams.orderIndex);
-       }
-        
-          console.log(cartArr);
-      }
-
-    $scope.changeQty = function(){
-      menus.changeOrder(posMenu, $routeParams.orderIndex);
-      }
-    $scope.remove =function(){
-      menus.removeFromList($routeParams.orderIndex);
+    $scope.addToCart  = function(order){
+      $scope.orderArr.push($scope.quantityOfPosition);
     }
-
-   });
+});
 
     orderApp.filter('myFilter', function(){
       return function(items, qty) {
          var filtered = [];
        for (var i = 0; i < items.length; i++) {
           var item = items[i];
-         if(qty>=1){
+         if(qty>=1 && addToCart){
            filtered.push(item);
            console.log(filtered.push(item));
          }
@@ -42,5 +24,36 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
       return filtered;
      };
  });
+  //    
+
+  //  //to do
+        
+  //    $scope.cartArr =[];
+  //   $scope.addToCart  = function(){
+  //     if($scope.quantityOfPosition >= 1){
+  //           $scope.cartArr = menus.addToList($routeParams.orderIndex);
+  //      }
+        
+  //         console.log(cartArr);
+  //     }
+
+  //   $scope.changeQty = function(){
+  //     menus.changeOrder(posMenu, $routeParams.orderIndex);
+  //     }
+  //   $scope.remove =function(){
+  //     menus.removeFromList($routeParams.orderIndex);
+  //   }
+
+  //  $scope.summa = order.price*quantityOfPosition;
+
+  //   $scope.total = function(){
+  //     var sum = 0;
+  //     for(var i=0; i<$scope.cartArr.length; i++) {
+  //            sum += summa;
+  //     }
+  // };
+     
+
+   
     
 
