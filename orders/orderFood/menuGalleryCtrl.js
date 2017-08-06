@@ -1,4 +1,4 @@
-orderApp.controller("menuGalleryCtrl", function($scope, $http, $location, menus){
+orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, menus){
 
     $scope.orderArr = [];
     $http.get("data/menuTA.json").then(function(response){
@@ -6,22 +6,48 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $location, menus)
        menus.load(response.data);
     });
 
-        $scope.openDetails = function(index) {
-        $location.path("/orderFood/" + index)
-    }
-});
+      $scope.quantityOfPosition = 0;
+   //to do
+        
+     $scope.cartArr =[];
+     $scope.addToCart  = function(){
+        if($scope.quantityOfPosition >= 1){
+            $scope.cartArr = menus.addToList($routeParams.orderIndex);
+        }
+        
+         console.log(cartArr);
+       }
 
-//orderApp.controller("menuSetCtrl", function($scope, $routeParams, menus, MenuTA){
- 
+   });
+
+    orderApp.filter('myFilter', function() {
+      return function(items, quantityOfPosition) {
+         var filtered = [];
+       for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+         if(quantityOfPosition>=1){
+           filtered.push(item);
+         }
+         }
+      return filtered;
+     };
+ });
+
+
+
+
+   //     $scope.openDetails = function(index) {
+    //     $location.path("/orderFood/" + index)
+    // }
+
+
 
 //    if(menus.getAllList().length===0){
 //     $scope.orderArr = menus.getAllList();
 // }
 
-//    $scope.order = menus.getPosMenu($routeParams.orderIndex);
-//    $scope.quantityOfPosition = "0";
+//   
+//    
 
-//    $scope.addToOrder  = function(){
-
-//    }
+//    
     
