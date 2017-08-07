@@ -1,4 +1,4 @@
-orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, menus){
+orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, $location, menus){
 
     $scope.orderArr = [];
     $http.get("data/menuTA.json").then(function(response){
@@ -38,12 +38,13 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
       }
        };
 
-    //    $scope.goToDelivery = function(){   
-    //     $location.path("orders/orderFood/Delivery/deliveryConfirm.html");
-    // }
-    // $scope.goToPickUp() = function(){   
-    //     $location.path("orders/orderFood/pickUp/pickUpConfirm.html");
-    // }
+        $scope.goToDelivery = function(){   
+          $location.path('/Delivery');
+          console.log($location);
+      }
+      $scope.goToPickUp = function(){   
+          $location.path("/pickUp");
+     }
 
 });    
 
