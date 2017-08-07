@@ -40,12 +40,16 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, $lo
 
         $scope.goToDelivery = function(){   
           $location.path('/Delivery');
-          console.log($location);
+          //console.log($location);
       }
       $scope.goToPickUp = function(){   
           $location.path("/pickUp");
      }
-
+     
+    //  $scope.openDetails = function(order){
+    //    $location.path("/orderFood/:orderIndex");
+    //  }
+     
 });    
 
 

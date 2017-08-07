@@ -22,10 +22,10 @@ var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap
             templateUrl: "orders/orderFood/menuGallery.html",
             controller: "menuGalleryCtrl"
         })  
-        //  .when("/orderFood/:orderIndex", {
-        //     templateUrl: "orders/orderFood/menuSet.html",
-        //     //controller: "menuSetCtrl"
-        //  })
+          .when("/orderFood/:orderIndex", {
+           templateUrl: "orders/orderFood/menuSet.html",
+            controller: "menuSetCtrl"
+         })
         // .when("/orderFood/myCard", {
         //     templateUrl: "orders/orderFood/menuMyCard.html",
         //     controller: "menuMyCardCtrl"            

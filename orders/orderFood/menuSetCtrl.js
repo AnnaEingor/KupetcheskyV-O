@@ -1,16 +1,5 @@
 
-// orderApp.controller("menuSetCtrl", function($scope, $routeParams, menus, MenuTA){
- 
+//  orderApp.controller("menuSetCtrl", function($scope, $routeParams, $location){
+     
 
-//    if(menus.getAllList().length===0){
-//     $scope.orderArr = menus.getAllList();
-// }
-
-//    $scope.order = menus.getPosMenu($routeParams.orderIndex);
-//    $scope.quantityOfPosition = "0";
-
-//    $scope.addToOrder  = function(){
-
-//    }
-    
-// });
+//  });
