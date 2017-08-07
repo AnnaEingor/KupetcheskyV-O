@@ -5,54 +5,48 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, men
        $scope.orderArr = response.data;
        menus.load(response.data);
     });
+    
+     $scope.cartArr =[];
+     $scope.addToCart = function(order){
+         $scope.cartArr.push(order);
+      }; 
 
-    $scope.addToCart  = function(order){
-      $scope.orderArr.push($scope.quantityOfPosition);
-    }
-});
+      $scope.total = function(){
+         var sum = 0;
+         for(var i=0; i<$scope.cartArr.length; i++){
+           var price = $scope.cartArr[i].price;
+           sum += $scope.cartArr[i].quantity*price;
+         }
+         return sum;
+       };
+    
+    $scope.quantityOfPosition=0;
 
-    orderApp.filter('myFilter', function(){
-      return function(items, qty) {
-         var filtered = [];
-       for (var i = 0; i < items.length; i++) {
-          var item = items[i];
-         if(qty>=1 && addToCart){
-           filtered.push(item);
-           console.log(filtered.push(item));
-         }
-         }
-      return filtered;
+    $scope.removeItem =function(item){
+       $scope.cartArr.splice(item, 1);
      };
- });
-  //    
 
-  //  //to do
-        
-  //    $scope.cartArr =[];
-  //   $scope.addToCart  = function(){
-  //     if($scope.quantityOfPosition >= 1){
-  //           $scope.cartArr = menus.addToList($routeParams.orderIndex);
-  //      }
-        
-  //         console.log(cartArr);
-  //     }
+    $scope.changePlus = function(item){
+      var index = $scope.cartArr.indexOf(item);
+      $scope.cartArr[index].quantity++;
 
-  //   $scope.changeQty = function(){
-  //     menus.changeOrder(posMenu, $routeParams.orderIndex);
-  //     }
-  //   $scope.remove =function(){
-  //     menus.removeFromList($routeParams.orderIndex);
-  //   }
+       };
+     $scope.changeMinus = function(item){
+      var index = $scope.cartArr.indexOf(item);
+      if($scope.cartArr[index].quantity>0){
+      $scope.cartArr[index].quantity--;
+      }
+       };
 
-  //  $scope.summa = order.price*quantityOfPosition;
+    //    $scope.goToDelivery = function(){   
+    //     $location.path("orders/orderFood/Delivery/deliveryConfirm.html");
+    // }
+    // $scope.goToPickUp() = function(){   
+    //     $location.path("orders/orderFood/pickUp/pickUpConfirm.html");
+    // }
 
-  //   $scope.total = function(){
-  //     var sum = 0;
-  //     for(var i=0; i<$scope.cartArr.length; i++) {
-  //            sum += summa;
-  //     }
-  // };
-     
+});    
+
 
    
     
