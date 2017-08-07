@@ -46,9 +46,9 @@ orderApp.controller("menuGalleryCtrl", function($scope, $http, $routeParams, $lo
           $location.path("/pickUp");
      }
      
-    //  $scope.openDetails = function(order){
-    //    $location.path("/orderFood/:orderIndex");
-    //  }
+      $scope.openDetails = function(index){
+       $location.path("orderFood/"+index);
+      }
      
 });    
 

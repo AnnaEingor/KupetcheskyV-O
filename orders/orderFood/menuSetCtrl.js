@@ -1,5 +1,5 @@
 
-//  orderApp.controller("menuSetCtrl", function($scope, $routeParams, $location){
-     
+orderApp.controller("menuSetCtrl", function($scope,$http,menus){
+      
 
-//  });
+ });
