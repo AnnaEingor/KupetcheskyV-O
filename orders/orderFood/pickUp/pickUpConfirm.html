@@ -33,9 +33,7 @@
         </p>
         </div>
       </div>
-      
-      
-
+       
       <div class="row">
       <div class="col-md-6">
         <p class="dateAndTime">Choose date and time</p>
@@ -47,19 +45,15 @@
             <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
         </p>
-
       </div>
        <div class="col-md-6">
          <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep">       
             </div>
       </div>
-
       </div>
+          
      
-     
-      
-     
-     <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="4"></textarea><br>
+     <textarea class="form-control" id="comments" name="comments" placeholder="Comment for order" rows="4"></textarea><br>
      <div class="row">
         <div class="col-sm-12 form-group">
         <pre class="alert">Your order: Name is {{clientName}},  Date: {{dt | date:"fullDate"}}. Time: {{mytime | date:'shortTime' }}</pre>

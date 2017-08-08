@@ -10,13 +10,45 @@
      <!-- GOOGLE MAP-->
    <div id="map" class="map"></div>
    </div>
+   
    <div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4 my-list">
      <!--table with order, without buttons.  only total and names. after plus summa of delivery-->
-   
+   <h4 class="wish">My order</h4>
+      <table class="table table-hover table-striped">
+          <thead> 
+              <th>Position</th>
+              <th>Quantity</th>
+              <th></th>
+          </thead>
+            <tfoot>
+             <tr>
+              <th>Order Total: {{orderSum+500}}<span class ="glyphicon glyphicon-ruble"></th>
+              <th></th>
+              <th></th>
+             </tr>
+            </tfoot>
+            <tbody>
+        <tr ng-repeat="order in orders">
+        <td>{{order.name}}</td>
+        <td>{{order.quantity}}</td> 
+        <td></td>
+        </tr>
+        <tr>
+          <th><strong>Order sum: {{orderSum}}<span class ="glyphicon glyphicon-ruble"></span></strong> </th>
+              <th></th>
+              <th></th>
+        </tr>
+            <tr>
+          <th>Delivery: {{500}}<span class ="glyphicon glyphicon-ruble"></th>
+              <th></th>
+              <th></th>
+        </tr>
+        </tbody>
+      </table>
    </div>
-   <div ng-repeat="order in orders">{{order.name}}</div>
+  
  <!-- פה Shoud be button לחזור-->
-   </div>
+   </div> 
    
 <br><br>
 <div class= "text-center">

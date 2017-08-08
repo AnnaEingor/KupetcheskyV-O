@@ -40,7 +40,7 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
   };
 
   $scope.goToDelivery = function () {
-    // if(user.hasProfile()){
+    // if(user.hasProfile){
     $location.path('/Delivery');
   // }
   // else{
@@ -50,7 +50,7 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
     
   //}
   // $scope.goToPickUp = function () {
-  //   if(user.hasProfile()){
+  //   if(user.hasProfile){
   //   $location.path("/pickUp");
   // }
   // else{

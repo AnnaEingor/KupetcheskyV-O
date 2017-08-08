@@ -1,4 +1,4 @@
- orderApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
+ orderApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, registredUser, User) {
 
     $http.get("app/data/users.json").then(function (response) {
         $scope.users = [];

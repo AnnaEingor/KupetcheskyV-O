@@ -6,8 +6,7 @@ orderApp.factory("User", function(){
         this.birthday = plainObject.birthday;
         this.email = plainObject.email;
         this.password = plainObject.password;
-        
-        
+    
     };
 
     return User;
@@ -15,8 +14,18 @@ orderApp.factory("User", function(){
 
 // Service that manages the active user
 
-orderApp.factory("activeUser", function(User){
+orderApp.factory("regisredUser", function(User){
     var user = null;
+
+    var create = function(){
+      return new User(plainObject);
+    }
+
+    var loadTo = function(plainObjectArr) {
+        for (var i = 0; i < plainObjectArr.length; i++) {
+            user.push(new User(plainObjectArr[i]))
+        }
+    }
 
     var isLoggedIn = function() {
         return user ? true : false;
@@ -34,17 +43,14 @@ orderApp.factory("activeUser", function(User){
         return user;
     };
 
+    // var update = function(user){
+
+    // }
+
     var hasProfile = function() {
         return user ? true : false;
     };
-    // var getDiscount = function(loggedInUser){
-    //     if(user.discount !=0){
-    //     user = loggedInUser;  
-
-    //     //todo
-        
-    //     }
-    // }
+    
 
     return {
         isLoggedIn: isLoggedIn,
@@ -62,3 +68,13 @@ orderApp.factory("activeUser", function(User){
   "addressHome": "ytytyt",
   "addressWork": "yieieieieieie",
   "discount": 5*/
+
+//   var service = {};
+ 
+//         service.GetAll = GetAll;
+//         service.GetById = GetById;
+//         service.GetByUsername = GetByUsername;
+//         service.Create = Create;
+//         service.Update = Update;
+//         service.Delete = Delete;
+ 

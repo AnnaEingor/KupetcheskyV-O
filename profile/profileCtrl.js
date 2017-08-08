@@ -1,4 +1,4 @@
-orderApp.controller("profileCtrl", function($scope, $http, $location, activeUser, User){
+orderApp.controller("profileCtrl", function($scope, $http, $location, registredUser, User){
 
     //new User
 });
