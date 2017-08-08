@@ -2,12 +2,11 @@
 orderApp.factory("User", function(){
     function User(plainObject) {
         this.firstName = plainObject.firstName;
-        this.lastName = plainObject.lastName;
+        this.lastName = plainObject.
+        this.birthday = plainObject.birthday;
         this.email = plainObject.email;
         this.password = plainObject.password;
-        this.addressHome = plainObject.addressHome;
-        this.addressWork = plainObject.addressWork;
-        this.discount - plainObject.discount;
+        
         
     };
 
@@ -35,21 +34,24 @@ orderApp.factory("activeUser", function(User){
         return user;
     };
 
-    var getDiscount = function(loggedInUser){
-        if(user.discount !=0){
-        user = loggedInUser;  
+    var hasProfile = function() {
+        return user ? true : false;
+    };
+    // var getDiscount = function(loggedInUser){
+    //     if(user.discount !=0){
+    //     user = loggedInUser;  
 
-        //todo
+    //     //todo
         
-        }
-    }
+    //     }
+    // }
 
     return {
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
         getUser: getUser,
-        getDiscount: getDiscount
+        hasProfile: hasProfile
     };   
 });
 

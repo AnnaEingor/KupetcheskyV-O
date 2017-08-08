@@ -1,4 +1,4 @@
-orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $location, menus, $uibModal) {
+orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $location, orderService,  menus, $uibModal) {
 
   $scope.orderArr = [];
   $http.get("data/menuTA.json").then(function (response) {
@@ -9,6 +9,7 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
   $scope.cartArr = [];
   $scope.addToCart = function (order) {
     $scope.cartArr.push(order);
+    orderService.addOrder(order);
   };
 
   $scope.total = function () {
@@ -39,12 +40,24 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
   };
 
   $scope.goToDelivery = function () {
+    // if(user.hasProfile()){
     $location.path('/Delivery');
-    //console.log($location);
+  // }
+  // else{
+  //   //create profile
+  //   $location.path('/profile');
   }
-  $scope.goToPickUp = function () {
-    $location.path("/pickUp");
-  }
+    
+  //}
+  // $scope.goToPickUp = function () {
+  //   if(user.hasProfile()){
+  //   $location.path("/pickUp");
+  // }
+  // else{
+  //   //create profile
+  //   $location.path('/profile');
+  // }
+  // }
 
   $scope.openDetails = function (order) {
     //  $location.path("orderFood/"+index);

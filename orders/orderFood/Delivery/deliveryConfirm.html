@@ -7,13 +7,17 @@
 <div class="container">
   <div class="row">
    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
+     <!-- GOOGLE MAP-->
    <div id="map" class="map"></div>
    </div>
    <div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4 my-list">
-     <!--table with order, without buttons-->
+     <!--table with order, without buttons.  only total and names. after plus summa of delivery-->
+   
    </div>
-
-</div>
+   <div ng-repeat="order in orders">{{order.name}}</div>
+ <!-- פה Shoud be button לחזור-->
+   </div>
+   
 <br><br>
 <div class= "text-center">
 <!--click on button and open modal window PROFILE -->
