@@ -14,7 +14,7 @@
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="order in orderArr">
         
         <!--here will attach modal element from menuSet.html-->
-       <div class="well gal-1"  data-toggle="modal" data-target="#myModal"  ng-click="openDetails($index)">
+       <div class="well gal-1"  data-toggle="modal" data-target="#myModal"  ng-click="openDetails(order)">
                                
             <h3>{{order.name}}</h3>
             <img ng-src="{{order.photo}}" class="img-responsive" alt="Image">

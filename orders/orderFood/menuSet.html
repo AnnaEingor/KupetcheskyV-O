@@ -1,28 +1,27 @@
 <!--to do modal   -->
 
 
- <!-- <div class="modal fade hide" id="myModal" role="dialog">
+  <!--<div class="modal fade hide" id="myModal" role="dialog">
   <div class="modal-dialog">
-      <div class="modal-content"> -->
+      <div class="modal-content"> 
 
-      
+      -->
     
 
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title galHeader">Do we add this position to your order?</h4>
-        </div>
-        <div class="modal-body">
-          <h4>Already ordered these? Rate!</h4>
+          <button type="button" class="close" data-dismiss="modal"ng-click="dismiss()" >&times;</button>
+          <!--rating-->
+           <h4 class="text-center"><strong>{{order.name}}</strong></h4>
           <div ng-init="x = 7"><span uib-rating ng-model="x" max="10" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"
              aria-labelledby="custom-icons-1"></span> <b>(<i>Rate:</i> {{x}})</b>
           </div>
-          <h4>{{order.name}}</h4>
-          <p>{{order.set}}</p>
-          <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> <br> {{order.price}} rub
+        </div>
+        
+        <div class="modal-body">
+          <img ng-src="{{order.photo}}" class="img-responsive" alt="Image"> 
         </div>
         <div class="modal-footer">
-          <button type="button" class="close" data-dismiss="modal">Close</button>
+          <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()">Close</button>
         </div>
      
         <!-- </div>
