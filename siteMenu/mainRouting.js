@@ -43,6 +43,10 @@ var orderApp = angular.module("orderApp", ["ngRoute", "ngAnimate", "ui.bootstrap
             templateUrl: "login/login.html",
             controller: "loginCtrl"
         })
+        .when("/profile",{
+            templateUrl: "profile/profile.html",
+            controller: "profileCtrl"
+        })
 });
 
 

@@ -1,30 +1,33 @@
- orderApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, registredUser, User) {
+ orderApp.controller("loginCtrl", function ($scope, $location,$uibModal) {
 
-    $http.get("data/users.json").then(function (response) {
-        $scope.users = [];
-        for (var i = 0; i < response.data.length; i++) {
-            $scope.users.push(new User(response.data[i]));
-        }
+    // $http.get("data/users.json").then(function (response) {
+    //     $scope.users = [];
+    //     for (var i = 0; i < response.data.length; i++) {
+    //         $scope.users.push(new User(response.data[i]));
+    //     }
 
-        //console.log(JSON.stringify($scope.users));
-    });
+    //     //console.log(JSON.stringify($scope.users));
+    // });
 
     $scope.login = function() {
+        $location.path("/payment");
+       }; 
         // var user = getLoggedInUser();
         // if (user != null) {
         //     activeUser.login(user);
             
-            $location.path("/payment");
+            
         // } else {
         //     $scope.failedAttempt = true;
         // }
-    };
+    
 
 //Should be option "no such user " 
 //should be option "forgot password"
+
 $scope.createProfile = function(){
          $uibModal.open({
-            templateUrl: "profile.html",
+            templateUrl: "profile/profile.html",
             controller: "profileCtrl"
  
 })

@@ -1,7 +1,7 @@
 
     <nav class="navbar gal-1">
    <div class="container-fluid">
-   <h1 class="galHeader">Login, please!</h1> 
+   <h1 class="galHeader">Login or create profile, please!</h1> 
    </div>
 </nav> 
     
@@ -23,15 +23,46 @@
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <div class = "button-group">
-                <button type="summit" class="btn btn-default pull-right" ng-click="login()">Login</button>
-                <button type "button" data-toggle="modal" data-target="#myLogin" on-click="createProfile()">Create Profile</button>
-                </div>
+                <button type="summit" class="btn btn-default" ng-click="login()">Login</button>
+                <button type "button" class="btn btn-default" data-toggle="modal" data-target="#myLogin" on-click="createProfile()">Create Profile</button>
+                                                                     
             </div>
         </div>
     </form>
-  <!--to do button, which call function which open modal with profile (if user not registred yet) -->
-    
+    <br><br><br>
+  <!--carusel feedback -->
+
+    <h2 class="text-center">What our customers say</h2>
+<div id="myCarouselFeed" class="carousel slide text-center" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarouselFeed" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarouselFeed" data-slide-to="1"></li>
+    <li data-target="#myCarouselFeed" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+    </div>
+    <div class="item">
+      <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+    </div>
+    <div class="item">
+      <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarouselFeed" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarouselFeed" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
   
-<!---->

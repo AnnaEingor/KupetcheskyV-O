@@ -1,11 +1,63 @@
+<!-- <div class="modal" id="myLogin" role="dialog">
+  <div class="modal-dialog">
+      <div class="modal-content">  -->
 
-<<div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()" >&times;</button>
-  <h3 class="text-center">Create your profile</h3>
-</div>
+<div class="modal-header gal-1">
+    <h1 class="galHeader">Create your profile</h1> 
+   </div>
+
   
   <div class="modal-body">
-        <form name="myForm" action="data/database.html" novalidate>
+              <!-- action="data/database.html" -->
+      <form class="form-horizontal" >
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fname">First Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" placeholder="Enter First Name" ng-model="fname">
+            </div>
+        </div>   
+
+       <div class="form-group">
+            <label class="control-label col-sm-2" for="lname">Last Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" ng-model="lname">
+            </div>
+        </div>  
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">E-mail:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter e-mail" ng-model="email">
+            </div>
+        </div>
+       <div class="form-group">
+            <label class="control-label col-sm-2" for="phone">Phone:</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="phone" placeholder="Enter phone" ng-model="phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="bday">Birthday:</label>
+            <div class=" col-sm-10">
+                <input type="date" class="form-control" id="bday" placeholder="Enter birthday" ng-model="bday">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="password">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="reset" class="btn btn-default">Reset</button>
+                <button type= "submit" class="btn btn-default">Submit</button>
+                                                                     
+            </div>
+        </div>
+    </form>
+        <!-- <form name="myForm" action="data/database.html" novalidate>
 
            <p>First Name: <input type="text" name="fname" ng-model="fname" required>
                  <span class="validSpan"  ng-show="myForm.fname.$dirty && myForm.fname.$invalid">
@@ -44,12 +96,16 @@
             <p><input type="reset">
             </p>
 
-         </form>
+         </form> -->
        </div>  
        
        <div class="modal-footer">
           <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()">Close</button>
        </div>
+
+  <!-- </div>
+</div>
+</div> -->
 
   
         
