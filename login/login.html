@@ -1,20 +1,19 @@
-<div class="container text-center">
-    <button type="button" class="close" aria-label="Close" ng-click="dismiss()">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    <h4 class="modal-title">Welcome back!</h4>
-</div>
 
-    <div class="alert alert-danger" ng-show="failedAttempt">
-        Invalid email or password
-    </div>
+    <nav class="navbar gal-1">
+   <div class="container-fluid">
+   <h1 class="galHeader">Login, please!</h1> 
+   </div>
+</nav> 
+    
     
     <form class="form-horizontal">
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="summit" class="btn btn-default pull-right" ng-click="login()">Login</button>
+            <label class="control-label col-sm-2" for="pwd">E-mail:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter e-mail" ng-model="email">
             </div>
         </div>
+
         <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Password:</label>
             <div class="col-sm-10">
@@ -22,4 +21,17 @@
             </div>
         </div>
         
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class = "button-group">
+                <button type="summit" class="btn btn-default pull-right" ng-click="login()">Login</button>
+                <button type "button" data-toggle="modal" data-target="#myLogin" on-click="createProfile()">Create Profile</button>
+                </div>
+            </div>
+        </div>
     </form>
+  <!--to do button, which call function which open modal with profile (if user not registred yet) -->
+    
+
+  
+<!---->

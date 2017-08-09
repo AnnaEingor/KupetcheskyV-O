@@ -1,27 +1,32 @@
 [
 { "firstName": "Anna",
   "lastName": "Eingor",
+  "birthday": 19899,
   "email": "an.lerm@yandex.ru",
-  "password": "1234",
-  "addressHome": "ytytyt",
-  "addressWork": "yieieieieieie",
-  "discount": 5
-  
-/*},
-{
-"firstName": "",
-  "lastName": "",
-  "email": "",
-  "password": "",
-  "addressHome": "",
-  "addressWork": ""
+  "phone": 123456,
+  "password": "123456"
 },
-{
-  "firstName": "",
-  "lastName": "",
-  "email": "",
-  "password": "",
-  "addressHome": "",
-  "addressWork": "" */
+  
+{ "firstName": "Vanna",
+  "lastName": "Tutut",
+  "birthday": 19899,
+  "email": "an@yandex.ru",
+  "phone": 123456,
+  "password": "654321"
+},
+{ "firstName": "Janna",
+  "lastName": "Pfpfpf",
+  "birthday": 9899,
+  "email": "janna@yandex.ru",
+  "phone": 123456,
+  "password": "789100"
+},
+{ "firstName": "Ioanna",
+  "lastName": "FGHHjjj",
+  "birthday": 19899,
+  "email": "ioannayandex.ru",
+  "phone": 123456,
+  "password": "0909090"
 }
 ]
+

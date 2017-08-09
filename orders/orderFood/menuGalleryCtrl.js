@@ -6,20 +6,14 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
     menus.load(response.data);
   });
 
+  
   $scope.cartArr = [];
   $scope.addToCart = function (order) {
     $scope.cartArr.push(order);
     orderService.addOrder(order);
   };
 
-  $scope.total = function () {
-    var sum = 0;
-    for (var i = 0; i < $scope.cartArr.length; i++) {
-      var price = $scope.cartArr[i].price;
-      sum += $scope.cartArr[i].quantity * price;
-    }
-    return sum;
-  };
+  $scope.total = orderService.total;
 
   $scope.quantityOfPosition = 0;
 
@@ -40,28 +34,15 @@ orderApp.controller("menuGalleryCtrl", function ($scope, $http, $routeParams, $l
   };
 
   $scope.goToDelivery = function () {
-    // if(user.hasProfile){
-    $location.path('/Delivery');
-  // }
-  // else{
-  //   //create profile
-  //   $location.path('/profile');
-  }
+     $location.path("/delivery");
+    };
     
-  //}
-  // $scope.goToPickUp = function () {
-  //   if(user.hasProfile){
-  //   $location.path("/pickUp");
-  // }
-  // else{
-  //   //create profile
-  //   $location.path('/profile');
-  // }
-  // }
+ $scope.goToPickUp = function () {
+     $location.path("/pickUp");
+   };
 
   $scope.openDetails = function (order) {
-    //  $location.path("orderFood/"+index);
-    $uibModal.open({
+     $uibModal.open({
       templateUrl: "orders/orderFood/menuSet.html",
       controller: "menuSetCtrl",
       resolve: {

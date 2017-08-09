@@ -1,5 +1,9 @@
-orderApp.controller("profileCtrl", function($scope, $http, $location, registredUser, User){
+orderApp.controller("profileCtrl", function($scope, $http, $location, $uibModalInstance){
+$scope.pass = "";
+$scope.confpass = "";
 
-    //new User
+    $scope.dismiss = function () {
+        $uibModalInstance.close("User dismissed");
+    }
 });
 

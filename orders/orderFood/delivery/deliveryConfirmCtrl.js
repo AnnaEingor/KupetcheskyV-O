@@ -11,19 +11,16 @@
 
 
 
- orderApp.controller("deliveryConfirmCtrl", function($scope, orderService){
-
-    // $scope.goToLogin = function() {
-    //     $location.path('/login');
-     // };
-
-    $scope.orders = orderService.getAllOrders();
-
-     //to do orderSum. Must be = total  from menuGalleryCtrl.js
+ orderApp.controller("deliveryConfirmCtrl", function($scope, $location, orderService){
     
-   $scope.orderSum = 150000;
+    $scope.orders = orderService.getAllOrders();
+    $scope.total = orderService.total();
 
+      
      //to do delivery. Must be = formula(distance from restaurant to address from placeID(Google place autocomplete)
+     $scope.goToPayment = function () {
+        $location.path("/login");
+}
  });
 
 

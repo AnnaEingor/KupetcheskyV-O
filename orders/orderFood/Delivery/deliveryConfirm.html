@@ -22,7 +22,7 @@
           </thead>
             <tfoot>
              <tr>
-              <th>Order Total: {{orderSum+500}}<span class ="glyphicon glyphicon-ruble"></th>
+              <th>Order Total: {{total+500}}<span class ="glyphicon glyphicon-ruble"></th>
               <th></th>
               <th></th>
              </tr>
@@ -34,7 +34,7 @@
         <td></td>
         </tr>
         <tr>
-          <th><strong>Order sum: {{orderSum}}<span class ="glyphicon glyphicon-ruble"></span></strong> </th>
+          <th><strong>Order sum: {{total}}<span class ="glyphicon glyphicon-ruble"></span></strong> </th>
               <th></th>
               <th></th>
         </tr>
@@ -50,12 +50,9 @@
  <!-- פה Shoud be button לחזור-->
    </div> 
    
-<br><br>
+
 <div class= "text-center">
-<!--click on button and open modal window PROFILE -->
-<button type="button" class = "btn" data-toggle="modal" data-target="#myLogin" ng-click = "goToProfile()">I'm here for the first time (enter profile)</button>
-<!--click on button and open modal window LOGIN -->
-<button type="button" class = "btn" data-toggle="modal" data-target="#myLogin" ng-click = "goToLogin()">I already registrated!(enter password)</button>
+ <button type="button" class ="btn btn-danger" ng-click="goToPayment()"><span class ="glyphicon glyphicon-ok"></span>To payment</button>
 </div>
 
 </div>
