@@ -27,11 +27,7 @@
     font-size: 0.8em;
   }
   
-  .carousel-inner img {
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-}
-
+  
 .carousel-caption h3 {
     color: #fff !important;
 }
