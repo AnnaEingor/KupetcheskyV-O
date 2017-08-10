@@ -1,15 +1,18 @@
 *{
   font-family: 'Lora', serif;
 }
-.wrap{ 
+.constant{ 
       background-color: #f9d0a4;
       color: #3d240b;
-      font-family: 'Souvenir', arial;
       font-weight: bold;
       font-size: 1.2em;
 
  }
-
+.navFoto{
+  width: 150px;
+  height: 150px;
+  
+}
  .bg-1{
   font-size: 2em;
  }
@@ -17,7 +20,8 @@
     margin-top: 12px;
   }
   li a{
-    margin-right: 33px;
+    margin-right: 25px;
+     color: #3d240b;
   }
   .dropdown-menu li a{
     font-weight: bold;
@@ -39,7 +43,6 @@
 }
  #foot{
       background-color: #f9d0a4;
-      font-family: 'Souvenir', arial;
       font-weight: bold;
       font-size: 1.2em;
       height: 70px;
@@ -58,5 +61,6 @@ margin: 60px;
 }
 
 .carousel-inner img {
-    width: 80%;
+    width: 85%;
+    margin: auto;
 }
