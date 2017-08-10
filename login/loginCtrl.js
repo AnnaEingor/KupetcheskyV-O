@@ -1,4 +1,4 @@
- orderApp.controller("loginCtrl", function ($scope, $location,$uibModal) {
+ orderApp.controller("loginCtrl", function ($scope, $location, $uibModal) {
 
     // $http.get("data/users.json").then(function (response) {
     //     $scope.users = [];
@@ -10,8 +10,8 @@
     // });
 
     $scope.login = function() {
-        $location.path("/payment");
-       }; 
+     $location.path("/payment");
+      }; 
         // var user = getLoggedInUser();
         // if (user != null) {
         //     activeUser.login(user);
@@ -24,6 +24,14 @@
 
 //Should be option "no such user " 
 //should be option "forgot password"
+
+// $scope.login = function(){
+//          $uibModal.open({
+//             templateUrl: "payment.html",
+//             controller: "paymentCtrl"
+ 
+// })
+// };
 
 $scope.createProfile = function(){
          $uibModal.open({
