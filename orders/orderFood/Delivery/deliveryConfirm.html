@@ -7,12 +7,18 @@
 <div class="container">
   <div class="row">
    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
+
      <!-- GOOGLE MAP-->
+   
+   <div id="floating-panel">
+      <input id="address" type="textbox" ng-model="address"/>
+      <input id="submit" type="button" value="Delivery"/>
+   </div>
    <div id="map" class="map"></div>
    </div>
    
    <div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4 my-list">
-     <!--table with order, without buttons.  only total and names. after plus summa of delivery-->
+     
    <h4 class="wish">My order</h4>
       <table class="table table-hover table-striped">
           <thead> 
@@ -22,7 +28,7 @@
           </thead>
             <tfoot>
              <tr>
-              <th>Order Total: {{total+500}}<span class ="glyphicon glyphicon-ruble"></th>
+              <th>Order Total: {{total+delivery}}<span class ="glyphicon glyphicon-ruble"></th>
               <th></th>
               <th></th>
              </tr>
@@ -39,7 +45,7 @@
               <th></th>
         </tr>
             <tr>
-          <th>Delivery: {{500}}<span class ="glyphicon glyphicon-ruble"></th>
+          <th>Delivery: {{delivery}}<span class ="glyphicon glyphicon-ruble"></th>
               <th></th>
               <th></th>
         </tr>
