@@ -15,43 +15,43 @@ var initMap = function initMap() {
         
 }
 
-var getAddress = function (){
+ var getAddress = function (){
     return address;
-};
-
- var distance = function distance(){
- var autocomplete = new google.maps.places.Autocomplete(address);
- 
-  google.maps.event.addListener(autocomplete, 'place_changed', function () {
-     var place = autocomplete.getPlace();
-     
-     var addressLat = place.geometry.location.lat();
-      var addressLng = place.geometry.location.lng();
-     var dist = google.maps.geometry.spherical.computeDistanceBetween(google.maps.LatLng(56.329549, 44.026211), 
-           new google.maps.LatLng(addressLat, addressLng));
-           });  
-      return dist;
  };
 
-  var delivery = function delivery(dist){
-   if(dist < 3000){
-       deliv = 500;
-   }
-     else if(dist>=3000 && dist<7000){
-         deliv = 700;
-     }
-     else {dist > 7000}{
-        deliv = 1000;
-     }
-        return deliv;
- }
+var distance = function distance(){
+      var dist = 0;
+ var autocomplete = new google.maps.places.Autocomplete(address);
+ google.maps.event.addListener(autocomplete, 'place_changed', function () {
+  var place = autocomplete.getPlace();
+  var addressLat = place.geometry.location.lat();
+  var addressLng = place.geometry.location.lng();
+      var dist = google.maps.geometry.spherical.computeDistanceBetween(google.maps.LatLng(56.329549, 44.026211), 
+            new google.maps.LatLng(addressLat, addressLng));
+            });  
+       return dist;
+ };
 
-return{
-    initMap: initMap,
-    getAddress: getAddress,
-    distance: distance,
-    delivery: delivery
+   var delivery = function delivery(dist){
+   var deliv = 0;   
+    if(dist < 3000){
+       deliv = 500;
+    }
+      else if(dist>=3000 && dist<7000){
+          deliv = 700;
+      }
+      else {
+         deliv = 1000;
+      }
+         return deliv;
+  }
+
+ return{
+   initMap: initMap,
+   getAddress: getAddress,
+   distance: distance,
+   delivery: delivery
    
-}
-});
+ }
+ });
 

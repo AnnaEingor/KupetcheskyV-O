@@ -8,16 +8,15 @@
      $scope.goToPayment = function () {
         $location.path("/login");
 }
-
   google.maps.event.addDomListener(window, "load", mapService.initMap);
-  
+
+   
   $scope.address = mapService.getAddress();
  
   $scope.delivery = mapService.delivery();
       
-
   });
-
+  
 
 
 
