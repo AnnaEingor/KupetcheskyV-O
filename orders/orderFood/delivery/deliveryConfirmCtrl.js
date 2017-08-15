@@ -10,10 +10,12 @@
 }
   google.maps.event.addDomListener(window, "load", mapService.initMap);
 
-   
-  $scope.address = mapService.getAddress();
+ $scope.address = "";
  
-  $scope.delivery = mapService.delivery();
+
+ $scope.distance = mapService.distance();
+
+ $scope.delivery = mapService.delivery();
       
   });
   

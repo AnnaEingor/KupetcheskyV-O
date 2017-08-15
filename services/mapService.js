@@ -1,5 +1,6 @@
 orderApp.factory("mapService", function () {
-var initMap = function initMap() {
+
+var initMap = function () {
     var centerLatLng = new google.maps.LatLng(56.329549, 44.026211);
     var mapOptions = {
          center: centerLatLng, 
@@ -15,42 +16,50 @@ var initMap = function initMap() {
         
 }
 
- var getAddress = function (){
-    return address;
- };
 
-var distance = function distance(){
-      var dist = 0;
- var autocomplete = new google.maps.places.Autocomplete(address);
- google.maps.event.addListener(autocomplete, 'place_changed', function () {
-  var place = autocomplete.getPlace();
-  var addressLat = place.geometry.location.lat();
-  var addressLng = place.geometry.location.lng();
-      var dist = google.maps.geometry.spherical.computeDistanceBetween(google.maps.LatLng(56.329549, 44.026211), 
-            new google.maps.LatLng(addressLat, addressLng));
-            });  
-       return dist;
- };
 
-   var delivery = function delivery(dist){
-   var deliv = 0;   
-    if(dist < 3000){
+
+// var distance = function(){
+// var dist=0;
+// console.log(address);
+//  var autocomplete = new google.maps.places.Autocomplete(address)
+//  console.log(autocomplete);
+
+//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+//    var place = autocomplete.getPlace();
+  
+//   var addressLat = place.geometry.location.lat();
+//     var addressLng = place.geometry.location.lng();
+//         var dist = google.maps.geometry.spherical.computeDistanceBetween(google.maps.LatLng(56.329549, 44.026211), 
+//              new google.maps.LatLng(addressLat, addressLng));
+//              });  
+//         return dist;
+//   };
+
+
+
+
+   var delivery = function(distance){
+       var deliv = 0;
+    if(distance < 3000){
        deliv = 500;
     }
-      else if(dist>=3000 && dist<7000){
+      else if(distance>=3000 && distance<7000){
           deliv = 700;
       }
       else {
          deliv = 1000;
       }
-         return deliv;
-  }
+             return deliv;
+   }
 
+   console.log(delivery(distance))
+       
  return{
    initMap: initMap,
-   getAddress: getAddress,
-   distance: distance,
-   delivery: delivery
+ //  getAddress: getAddress,
+  distance: distance,
+  delivery: delivery,
    
  }
  });
