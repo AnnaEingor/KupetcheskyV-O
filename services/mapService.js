@@ -15,8 +15,10 @@ orderApp.factory("mapService", function () {
     });
   };
 
-  var distance = function () {
-    var dist = 0;
+
+
+  var delivery = function () {
+    var deliv = 0;
 
   var defaultBounds = new google.maps.LatLngBounds(
   new google.maps.LatLng(56.6, 44.1),
@@ -33,35 +35,32 @@ var options = {
     
     google.maps.event.addListener(autocomplete, 'place_changed', function () {
       var place = autocomplete.getPlace();
- console.log(place);
+    console.log(place);
       var addressLat = place.geometry.location.lat();
- console.log(addressLat);
+     
+    console.log(addressLat);
       var addressLng = place.geometry.location.lng();
-console.log(addressLng);
-      var dist = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(56.329549, 44.026211),new google.maps.LatLng(addressLat, addressLng));
- console.log(dist);    
-    });
+    console.log(addressLng);
+      var dist = Math.round(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(56.329549, 44.026211),new google.maps.LatLng(addressLat, addressLng)));
+    
+      console.log(dist);
+  
+     if (dist < 3000)
+         deliv = 500;
+     else if (dist >= 3000 && dist < 7000) 
+          deliv = 700;
+    else 
+          deliv = 1000;
+    
+    console.log(deliv);
+      return deliv;
+  });
 
-     return dist;
-  };
-
-  var delivery = function () {
-     var x = distance();
-    if (x < 3000) {
-      deliv = 500;
-    } else if (x >= 3000 && x < 7000) {
-      deliv = 700;
-    } else {
-      deliv = 1000;
-    }
-    return deliv;
   };
 
   return {
     initMap: initMap,
-    distance: distance,
     delivery: delivery
-
   }
 });
 
