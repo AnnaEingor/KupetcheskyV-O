@@ -13,35 +13,36 @@ orderApp.factory("mapService", function () {
       map: map,
       title: "Restaurant Kupetchesky"
     });
-
-    
-  }
+  };
 
   var distance = function () {
     var dist = 0;
 
-    var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(56.489, 43.601),
-      new google.maps.LatLng(56.36, 44.074)    
-    );
+  var defaultBounds = new google.maps.LatLngBounds(
+  new google.maps.LatLng(56.6, 44.1),
+  new google.maps.LatLng(56.0, 43.9));
 
-    var options = {
-      bounds: defaultBounds
-    };
-    
+
+var options = {
+  bounds: defaultBounds,
+  types: ['establishment'],
+  componentRestrictions: {country: 'ru'}
+};
+
     var autocomplete = new google.maps.places.Autocomplete(address, options);
-
+    
     google.maps.event.addListener(autocomplete, 'place_changed', function () {
       var place = autocomplete.getPlace();
-
+ console.log(place);
       var addressLat = place.geometry.location.lat();
+ console.log(addressLat);
       var addressLng = place.geometry.location.lng();
-      var dist = google.maps.geometry.spherical.computeDistanceBetween(google.maps.LatLng(56.329549, 44.026211),
-        new google.maps.LatLng(addressLat, addressLng));
-      
+console.log(addressLng);
+      var dist = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(56.329549, 44.026211),new google.maps.LatLng(addressLat, addressLng));
+ console.log(dist);    
     });
 
-    return dist;
+     return dist;
   };
 
   var delivery = function (x) {
