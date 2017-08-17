@@ -11,12 +11,14 @@ orderApp.controller('deliveryConfirmCtrl', function ($scope, mapService, orderSe
 
   $scope.address = " ";
 
+  // $scope.distance = mapService.distance();
+  // console.log($scope.distance);
+ 
   //recieve distance(number)
   //var d = mapService.distance();  
    //console.log(d);
 
-// $scope.delivery = function(){
-//   var delivery = mapService.delivery();
+ $scope.delivery =  mapService.delivery();
 //   console.log(delivery);
  
 // }

@@ -28,7 +28,7 @@ var options = {
   types: ['establishment'],
   componentRestrictions: {country: 'ru'}
 };
-
+    
     var autocomplete = new google.maps.places.Autocomplete(address, options);
     
     google.maps.event.addListener(autocomplete, 'place_changed', function () {
@@ -45,8 +45,8 @@ console.log(addressLng);
      return dist;
   };
 
-  var delivery = function (x) {
-     var deliv = 0;
+  var delivery = function () {
+     var x = distance();
     if (x < 3000) {
       deliv = 500;
     } else if (x >= 3000 && x < 7000) {
