@@ -1,8 +1,9 @@
 
-orderApp.controller('deliveryConfirmCtrl', function ($scope, mapService, orderService) {
+orderApp.controller('deliveryConfirmCtrl', function ($scope, $location, mapService, orderService) {
 
   $scope.orders = orderService.getAllOrders();
   $scope.total = orderService.total();
+
   $scope.goToPayment = function () {
           $location.path("/login");
   };
