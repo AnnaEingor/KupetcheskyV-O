@@ -10,7 +10,7 @@
                 <!-- TODO <th>File with list of previous orders</th> -->
             </tr>
         </thead>
-        <tr ng-repeat="user in userList track by $index">
+        <tr ng-repeat="user in userList">
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>
             <td>{{user.birthday}}</td>
@@ -20,3 +20,5 @@
         </tr>
     </table>
 </div>
+
+<!-- user in userList track by $index -->

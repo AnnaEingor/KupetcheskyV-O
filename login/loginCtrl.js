@@ -11,7 +11,7 @@ orderApp.controller("loginCtrl", function ($scope, $location, $uibModal, ActiveU
               console.log(JSON.stringify(user));
               $scope.failedAttempt = true;
           }
-      }
+      };
   
       var getLoggedInUser = function() {
           var usersArr = Users.getAllUsers();
@@ -21,13 +21,10 @@ orderApp.controller("loginCtrl", function ($scope, $location, $uibModal, ActiveU
               }
           }
           return null;
-      }
+      };
   
       
-   });
-  
-
-  //Should be option "no such user " 
+   //Should be option "no such user " 
   //should be option "forgot password"
 
   
@@ -36,7 +33,7 @@ orderApp.controller("loginCtrl", function ($scope, $location, $uibModal, ActiveU
     $uibModal.open({
       templateUrl: "profile/profile.html",
       controller: "profileCtrl"
-    })
+    });
   };
 
-})
+});

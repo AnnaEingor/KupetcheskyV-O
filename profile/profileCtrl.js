@@ -1,4 +1,4 @@
-orderApp.controller("profileCtrl", function($scope, $uibModalInstance, User, ActiveUser, Users){
+orderApp.controller("profileCtrl", function($scope, $uibModalInstance, $location, User, ActiveUser, Users){
      $scope.fname=" ";
      $scope.lname=" ";
      $scope.phone=" ";
@@ -12,7 +12,7 @@ orderApp.controller("profileCtrl", function($scope, $uibModalInstance, User, Act
     }
 
     $scope.cancel = function() {
-        $location.path("/first");
+        $location.path("/index");
     };
 
     $scope.newUser = new User({});
@@ -41,18 +41,17 @@ orderApp.controller("profileCtrl", function($scope, $uibModalInstance, User, Act
                     if($scope.newUser.password === undefined) {
                         $scope.newUser.password = $scope.password;
                     }
-                }
+                };
                     
                     Users.updateUser(i,$scope.newUser);
-                }
-            }
-        }
+                };
+                    
 
         $location.path("/data/database");
-    };
+    
 
     $scope.userName = function() {
         return ActiveUser.get().email + ActiveUser.get().password;
-    }
+    };
 });
 
