@@ -31,13 +31,18 @@ orderApp.factory("ActiveUser", function(User){
 
     var getOrderId = function() {
         return user.orderId;
-    }
+    };
+
+    var userName = function() {
+        return user.email + user.password;
+    };
 
     return {
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        getOrderId: getOrderId
+        getOrderId: getOrderId,
+        userName: userName
     };   
 });
 
