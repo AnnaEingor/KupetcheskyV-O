@@ -6,7 +6,7 @@ orderApp.controller("loginCtrl", function ($scope, $location, $uibModal, ActiveU
           var user = getLoggedInUser();
           if (user != null) {
               ActiveUser.login(user);
-              $location.path("/payment");
+            //   $location.path("/payment");
           } else {
               console.log(JSON.stringify(user));
               $scope.failedAttempt = true;

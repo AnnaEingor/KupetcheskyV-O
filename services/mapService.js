@@ -18,7 +18,7 @@ orderApp.factory("mapService", function () {
 
 
   var delivery = function () {
-    var deliv = 0;
+   // var deliv = 0;
 
   var defaultBounds = new google.maps.LatLngBounds(
   new google.maps.LatLng(56.6, 44.1),
@@ -43,24 +43,37 @@ var options = {
     console.log(addressLng);
       var dist = Math.round(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(56.329549, 44.026211),new google.maps.LatLng(addressLat, addressLng)));
     
+    console.log(dist);
+return dist;
+});
+  };
+
+  var costDelivery = function(){
+      var dist = delivery();
       console.log(dist);
-  
-     if (dist < 3000)
-         deliv = 500;
-     else if (dist >= 3000 && dist < 7000) 
-          deliv = 700;
-    else 
-          deliv = 1000;
+      var deliv = 0;
+
+      if (dist < 3000) {
+        deliv = 500
+      }
+      else if (dist >= 3000 && dist < 7000) {
+        deliv = 700
+      }
+     
+     else 
+         deliv = 1000;
     
-    console.log(deliv);
+    
       return deliv;
-  });
+      console.log("cost of delivery = " +deliv);
+  
 
   };
 
   return {
     initMap: initMap,
-    delivery: delivery
+    delivery: delivery,
+    costDelivery: costDelivery
   }
 });
 

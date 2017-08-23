@@ -11,6 +11,9 @@ orderApp.controller('deliveryConfirmCtrl', function ($scope, $location, mapServi
   google.maps.event.addDomListener(window, "load", mapService.initMap);
 
   $scope.address = " ";
+  $scope.toDist = function(){
+    alert(mapService.delivery());
+  };
   $scope.delivery = mapService.delivery();
 });
   
