@@ -8,6 +8,7 @@ orderApp.controller('deliveryConfirmCtrl', function ($scope, $location, mapServi
           $location.path("/login");
   };
 
+  $scope.mapService = mapService;
   google.maps.event.addDomListener(window, "load", mapService.initMap);
 
   $scope.address = " ";
