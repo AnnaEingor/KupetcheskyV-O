@@ -10,11 +10,11 @@
 
      <!-- GOOGLE MAP-->
    
-   <div id="floating-panel">
+   <!-- <div id="floating-panel"> -->
       <input id="address" class="controls" type="text" placeholder="Enter a location" ng-model="address" />
-      <input id="submit" type="button" value="To delive" ng-click="toDist()"/>
-   </div>
-   <div id="map" class="map"></div>
+     <input id="toDeliv" type="button" value="cost of delivery" ng-click="cost()"/>
+   <!-- </div> -->
+   <div id="map" class="map" ng-init=initMap()></div>
    </div>
    
    <!--Confirm Order-->

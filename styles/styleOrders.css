@@ -54,5 +54,8 @@
         padding-left: 10px;
       }
 #address{
-    width: 280px;
+    width: 80%;
+    height: 36px;
+    font-size: 1.7em;
 }
+

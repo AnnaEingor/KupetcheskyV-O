@@ -1,5 +1,5 @@
 
-
+//одна менюшка
 orderApp.factory("MenuTA", function(){
     function MenuTA(plainObject) {
         this.name = plainObject.name;
@@ -11,7 +11,7 @@ orderApp.factory("MenuTA", function(){
 
     return MenuTA;
 });
-
+//массив менюшек
 orderApp.factory("menus", function(MenuTA) {
     var orderArr = [];
 
